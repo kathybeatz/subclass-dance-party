@@ -26,7 +26,5 @@ makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
 makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 
 
-// var test = new makeBlinkyDancer(100, 100, 100);
-// console.log("what is $node an instanceof? ", test.$node instanceof jQuery);
-// console.log("test step: ",test.step());
-
+var test = new makeBlinkyDancer(100, 100, 100);
+console.log("what is $node? ", test.$node);
