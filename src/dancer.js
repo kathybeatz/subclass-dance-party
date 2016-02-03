@@ -15,15 +15,17 @@ var Dancer = function(top, left, timeBetweenSteps){
 Dancer.prototype.step = function() {
     // the basic dancer doesn't do anything interesting at all on each step,
     // it just schedules the next step
-    var context = this;
+    var contextWithinDancerConstructor = this;
 
-    console.log("What is this? ", context);
+    console.log("inside step function: ");
 
     setTimeout(function() {
 
       console.log("blink");
-      context.step();
+
+      contextWithinDancerConstructor.step();
     }, this.timeBetweenSteps);
+
 };
 
 Dancer.prototype.setPosition = function(top, left) {
